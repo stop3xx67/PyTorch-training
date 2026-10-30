@@ -1,0 +1,10 @@
+import torch
+
+w = list(map(float, input().split()))
+x = list(map(float, input().split()))
+
+W = torch.tensor([w[1:]], dtype=torch.float32)
+bias = torch.tensor(w[0], dtype=torch.float32)
+t_inp = torch.tensor(x, dtype=torch.float32)
+
+y = torch.mv(W, t_inp) + bias
