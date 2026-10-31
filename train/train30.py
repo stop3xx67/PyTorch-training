@@ -36,7 +36,7 @@ for _ in range(N):
     k = np.random.randint(0, total)
     # пропустите через модель k-й образ выборки x_train и вычислите прогноз predict
     predict = model(x_train[k])
-    loss = loss_func(predict, x_train[k]) # вычислите значение функции потерь и сохраните результат в переменной loss
+    loss = loss_func(predict, y_train[k]) # вычислите значение функции потерь и сохраните результат в переменной loss
 
     optimizer.zero_grad()
     loss.backward()
